@@ -42,8 +42,8 @@ jobs:
     - name: Add GitHub source to NuGet config
       run: |
         dotnet nuget add source \
-          --username nguyenvantu123 \
+          --username 19nguyenvantu94 \
           --password ${{ secrets.GH_PACKAGES_TOKEN }} \
           --store-password-in-clear-text \
           --name github \
-          "https://nuget.pkg.github.com/nguyenvantu123/index.json"
+          "https://nuget.pkg.github.com/19nguyenvantu94/index.json"
