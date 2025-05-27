@@ -27,6 +27,15 @@ jobs:
     - name: Pack libraries
       run: dotnet pack --no-build --configuration Release -o ./nupkgs
 
+    - name: Add GitHub source to NuGet config
+      run: |
+        dotnet nuget add source \
+          --username 19nguyenvantu94 \
+          --password ${{ secrets.GH_PACKAGES_TOKEN }} \
+          --store-password-in-clear-text \
+          --name github \
+          "https://nuget.pkg.github.com/19nguyenvantu94/index.json"
+
     - name: Push packages to GitHub Packages
       run: |
         for file in ./nupkgs/*.nupkg
@@ -39,11 +48,4 @@ jobs:
       env:
         NUGET_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
-    - name: Add GitHub source to NuGet config
-      run: |
-        dotnet nuget add source \
-          --username 19nguyenvantu94 \
-          --password ${{ secrets.GH_PACKAGES_TOKEN }} \
-          --store-password-in-clear-text \
-          --name github \
-          "https://nuget.pkg.github.com/19nguyenvantu94/index.json"
+    
