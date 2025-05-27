@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.Core", "SharedLib.Core\SharedLib.Core.csproj", "{27247233-9FEB-490F-86C6-562DED4CFCD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.Redis", "SharedLib.Redis\SharedLib.Redis.csproj", "{4BFEEC90-6A0C-4D5B-9FDC-EA7D4C66E459}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.EventBus", "SharedLib.EventBus\SharedLib.EventBus.csproj", "{E497E4CF-05C8-4178-B93E-262681B0D31E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.MySQL", "SharedLib.MySQL\SharedLib.MySQL.csproj", "{009594E8-9E6A-46D5-ACB4-CDC7F22AA928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.Logging", "SharedLib.Logging\SharedLib.Logging.csproj", "{19552606-4A6B-4E7E-8187-FC152E4D507C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.EventBus.RabbitMQ", "SharedLib.EventBus.RabbitMQ\SharedLib.EventBus.RabbitMQ.csproj", "{29A24989-B2CF-480A-89DB-2D6C437E6DE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLib.DistributedRedis", "SharedLib.DistributedRedis\SharedLib.DistributedRedis.csproj", "{86616CEF-6794-4649-9282-1EEC5B0F1BB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27247233-9FEB-490F-86C6-562DED4CFCD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27247233-9FEB-490F-86C6-562DED4CFCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27247233-9FEB-490F-86C6-562DED4CFCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27247233-9FEB-490F-86C6-562DED4CFCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFEEC90-6A0C-4D5B-9FDC-EA7D4C66E459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFEEC90-6A0C-4D5B-9FDC-EA7D4C66E459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFEEC90-6A0C-4D5B-9FDC-EA7D4C66E459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFEEC90-6A0C-4D5B-9FDC-EA7D4C66E459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E497E4CF-05C8-4178-B93E-262681B0D31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E497E4CF-05C8-4178-B93E-262681B0D31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E497E4CF-05C8-4178-B93E-262681B0D31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E497E4CF-05C8-4178-B93E-262681B0D31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{009594E8-9E6A-46D5-ACB4-CDC7F22AA928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009594E8-9E6A-46D5-ACB4-CDC7F22AA928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009594E8-9E6A-46D5-ACB4-CDC7F22AA928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009594E8-9E6A-46D5-ACB4-CDC7F22AA928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19552606-4A6B-4E7E-8187-FC152E4D507C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19552606-4A6B-4E7E-8187-FC152E4D507C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19552606-4A6B-4E7E-8187-FC152E4D507C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19552606-4A6B-4E7E-8187-FC152E4D507C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A24989-B2CF-480A-89DB-2D6C437E6DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A24989-B2CF-480A-89DB-2D6C437E6DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A24989-B2CF-480A-89DB-2D6C437E6DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A24989-B2CF-480A-89DB-2D6C437E6DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86616CEF-6794-4649-9282-1EEC5B0F1BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86616CEF-6794-4649-9282-1EEC5B0F1BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86616CEF-6794-4649-9282-1EEC5B0F1BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86616CEF-6794-4649-9282-1EEC5B0F1BB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C05C6AE-FD60-40B7-B9C6-09DC294A81EC}
+	EndGlobalSection
+EndGlobal
