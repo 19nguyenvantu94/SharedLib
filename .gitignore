@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ClassLibrary1/obj/Debug/net8.0
+/SharedLib.Core/bin/Debug/net8.0
+/SharedLib.Core/obj
+/SharedLib.DistributedRedis/bin/Debug/net8.0
+/SharedLib.DistributedRedis/obj
+/SharedLib.EventBus/bin/Debug/net8.0
+/SharedLib.EventBus/obj
+/SharedLib.EventBus/GlobalUsings.cs
+/SharedLib.EventBus.RabbitMQ/bin/Debug/net8.0
+/SharedLib.EventBus.RabbitMQ/obj
+/SharedLib.Logging/bin/Debug/net8.0
+/SharedLib.Logging/obj
+/SharedLib.MySQL/obj
+/SharedLib.Redis/bin/Debug/net8.0
+/SharedLib.Redis/obj
