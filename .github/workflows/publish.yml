@@ -1,0 +1,49 @@
+name: Publish NuGet Package to GitHub Packages
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger khi bạn tạo tag v1.0.0, v1.1.0,...
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build solution
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Pack libraries
+      run: dotnet pack --no-build --configuration Release -o ./nupkgs
+
+    - name: Push packages to GitHub Packages
+      run: |
+        for file in ./nupkgs/*.nupkg
+        do
+          dotnet nuget push "$file" \
+            --source "github" \
+            --api-key "${{ secrets.GH_PACKAGES_TOKEN }}" \
+            --skip-duplicate
+        done
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+
+    - name: Add GitHub source to NuGet config
+      run: |
+        dotnet nuget add source \
+          --username nguyenvantu123 \
+          --password ${{ secrets.GH_PACKAGES_TOKEN }} \
+          --store-password-in-clear-text \
+          --name github \
+          "https://nuget.pkg.github.com/nguyenvantu123/index.json"
