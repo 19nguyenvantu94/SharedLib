@@ -1,4 +1,6 @@
-﻿namespace SharedLib.EventBus.Events;
+﻿using System.Text.Json.Serialization;
+
+namespace SharedLib.EventBus.Events;
 
 public record IntegrationEvent
 {
